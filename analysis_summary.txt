@@ -1,0 +1,35 @@
+
+# Resumo dos Resultados do Experimento GraphQL vs REST
+
+## RQ1: Tempo de Resposta
+
+- GraphQL: Média = 880.35 ms
+- REST: Média = 1352.92 ms
+- Diferença: -472.57 ms
+- p-value: 0.0605
+- Conclusão: Não há diferença significativa entre GraphQL e REST
+
+
+## RQ2: Tamanho da Resposta
+
+- GraphQL: Média = 2217.55 bytes
+- REST: Média = 29327.67 bytes
+- Diferença: -27110.12 bytes
+- p-value: 0.0000
+- Conclusão: GraphQL produz respostas significativamente menores que REST
+
+
+## Análise por Tipo de Consulta
+
+SIMPLE:
+  Tempo - GraphQL: 816.41 ms, REST: 762.53 ms
+  Tamanho - GraphQL: 1659 bytes, REST: 7999 bytes
+
+COMPLEX:
+  Tempo - GraphQL: 1003.81 ms, REST: 869.66 ms
+  Tamanho - GraphQL: 3200 bytes, REST: 55982 bytes
+
+MULTIPLE:
+  Tempo - GraphQL: 821.03 ms, REST: 2426.56 ms
+  Tamanho - GraphQL: 1796 bytes, REST: 24002 bytes
+

@@ -1,0 +1,7 @@
+API,Tipo de Consulta,Tempo Médio (ms),Tempo Mediano (ms),Tamanho Médio (KB),Tamanho Mediano (KB),Número de Medições
+GRAPHQL,simple,816.41,764.02,1.62,1.62,600
+GRAPHQL,complex,1003.81,869.71,3.12,3.13,599
+GRAPHQL,multiple,821.03,763.96,1.75,1.75,600
+REST,simple,762.53,731.65,7.81,7.89,600
+REST,complex,869.66,810.14,54.67,54.88,600
+REST,multiple,2426.56,2280.90,23.44,23.44,600

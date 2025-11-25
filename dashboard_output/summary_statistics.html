@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estatísticas Resumo - GraphQL vs REST</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Estatísticas Resumo - Experimento GraphQL vs REST</h1>
+    <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>API</th>
+      <th>Tempo Médio (ms)</th>
+      <th>Tempo Mediano (ms)</th>
+      <th>Desvio Padrão Tempo (ms)</th>
+      <th>Tamanho Médio (KB)</th>
+      <th>Tamanho Mediano (KB)</th>
+      <th>Desvio Padrão Tamanho (KB)</th>
+      <th>Número de Medições</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GRAPHQL</td>
+      <td>880.35</td>
+      <td>793.61</td>
+      <td>458.75</td>
+      <td>2.17</td>
+      <td>1.75</td>
+      <td>0.68</td>
+      <td>1799</td>
+    </tr>
+    <tr>
+      <td>REST</td>
+      <td>1352.92</td>
+      <td>858.33</td>
+      <td>922.65</td>
+      <td>28.64</td>
+      <td>23.44</td>
+      <td>20.83</td>
+      <td>1800</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
