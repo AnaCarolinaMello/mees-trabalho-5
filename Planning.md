@@ -3,10 +3,12 @@
 ## 1. Hipóteses
 
 ### Hipótese Nula (H₀)
+
 - **H₀₁**: Não há diferença significativa no tempo de resposta entre consultas GraphQL e REST.
 - **H₀₂**: Não há diferença significativa no tamanho das respostas entre consultas GraphQL e REST.
 
 ### Hipótese Alternativa (H₁)
+
 - **H₁₁**: Respostas às consultas GraphQL são mais rápidas que respostas às consultas REST.
 - **H₁₂**: Respostas às consultas GraphQL têm tamanho menor que respostas às consultas REST.
 
@@ -18,7 +20,7 @@
 ## 3. Variáveis Independentes
 
 1. **Tipo de API**: GraphQL ou REST (fator com 2 níveis)
-2. **Tipo de Consulta**: 
+2. **Tipo de Consulta**:
    - Consulta simples (dados básicos)
    - Consulta complexa (dados aninhados)
    - Consulta com múltiplos recursos
@@ -27,12 +29,14 @@
 ## 4. Tratamentos
 
 ### Tratamento 1: API GraphQL
+
 - Endpoint: `https://api.github.com/graphql`
 - Método: POST
 - Headers: Authorization, Content-Type: application/json
 - Body: Query GraphQL
 
 ### Tratamento 2: API REST
+
 - Endpoint: `https://api.github.com/rest`
 - Método: GET/POST (dependendo da operação)
 - Headers: Authorization, Accept: application/vnd.github.v3+json
@@ -40,13 +44,16 @@
 
 ## 5. Objetos Experimentais
 
+O objeto dessa pesquisa é comparar a eficiência entre as APIs GraphQL e REST do Github.
+
 - **Repositórios GitHub**: Seleção de repositórios populares do GitHub
 - **Consultas equivalentes**: Mesmas informações solicitadas via GraphQL e REST
 - **Ambiente controlado**: Mesma máquina, mesma rede, mesmas condições
 
 ## 6. Tipo de Projeto Experimental
 
-**Experimento Controlado (Within-Subjects Design)**
+**Experimento Controlado**
+
 - Cada objeto experimental (repositório/consulta) é testado com ambos os tratamentos (GraphQL e REST)
 - Ordem dos tratamentos randomizada para evitar efeitos de ordem
 - Medições repetidas para cada combinação de tratamento e objeto experimental
@@ -61,6 +68,7 @@
 ## 8. Ameaças à Validade
 
 ### 8.1 Ameaças à Validade Interna
+
 - **Variação de carga do servidor**: O GitHub pode ter diferentes cargas em diferentes momentos
   - *Mitigação*: Executar medições em horários variados e calcular médias
 - **Cache**: Respostas podem ser cacheadas
@@ -69,15 +77,17 @@
   - *Mitigação*: Executar múltiplas réplicas e calcular médias
 
 ### 8.2 Ameaças à Validade Externa
+
 - **Generalização**: Resultados podem ser específicos para a API do GitHub
   - *Mitigação*: Documentar limitações e contexto do experimento
 - **Escalabilidade**: Resultados podem variar com diferentes tamanhos de dataset
   - *Mitigação*: Testar com diferentes tamanhos de consulta
 
-### 8.3 Ameaças à Validade de Construção
+### 8.3 Ameaças à Validade de Construto
+
 - **Equivalência das consultas**: Consultas GraphQL e REST podem não ser exatamente equivalentes
   - *Mitigação*: Garantir que ambas retornem os mesmos dados
-- **Medição de tempo**: Pode incluir overhead de bibliotecas
+- **Medição de tempo**: Pode incluir *overhead* de bibliotecas
   - *Mitigação*: Medir tempo de forma consistente para ambos os tratamentos
 
 ## 9. Critérios de Sucesso
@@ -88,7 +98,7 @@
 ## 10. Análise Estatística
 
 - **Teste de normalidade**: Shapiro-Wilk ou Kolmogorov-Smirnov
-- **Teste de comparação**: 
+- **Teste de comparação**:
   - Se normal: Teste t pareado (paired t-test)
   - Se não normal: Teste de Wilcoxon (Wilcoxon signed-rank test)
 - **Tamanho do efeito**: Cohen's d
@@ -101,5 +111,3 @@
 - **Bibliotecas**: requests, time, statistics, scipy, pandas
 - **Rede**: Conexão estável à internet
 - **API**: GitHub API v4 (GraphQL) e v3 (REST)
-
-
