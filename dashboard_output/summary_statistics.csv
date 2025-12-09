@@ -1,3 +1,3 @@
-API,Tempo Médio (ms),Tempo Mediano (ms),Desvio Padrão Tempo (ms),Tamanho Médio (KB),Tamanho Mediano (KB),Desvio Padrão Tamanho (KB),Número de Medições
-GRAPHQL,880.35,793.61,458.75,2.17,1.75,0.68,1799
-REST,1352.92,858.33,922.65,28.64,23.44,20.83,1800
+API;Tempo Médio (ms);Tempo Mediano (ms);Desvio Padrão Tempo (ms);Tamanho Médio (KB);Tamanho Mediano (KB);Desvio Padrão Tamanho (KB);Número de Medições
+graphql;880,35;793,61;458,75;2,17;1,75;0,68;1799
+rest;1352,92;858,33;922,65;28,64;23,44;20,83;1800
